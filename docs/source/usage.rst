@@ -1,34 +1,21 @@
-Usage
-=====
+# RP2040 Mikrodenetleyici ile Sabit Kanatlı İHA Projesi
 
-.. _installation:
+![RP2040_Otopilot](https://github.com/yildiraysabanci/RP2040-Otopilot-Projesi/assets/98615464/1c928da4-6239-4bbe-b5ee-b0d1b46e3cab)
 
-Installation
-------------
 
-To use Lumache, first install it using pip:
+Bu proje, RP2040 mikrodenetleyici kullanılarak geliştirilmiş sabit kanatlı bir İHA'yı hedefler. Proje, özellikle [SimurgFLY] tarafından geliştirilmektedir ve aşağıdaki ana özellikleri içermektedir:
+## Kullanilan Malzemler
++ RP2040
++ ICM20948
++ BME280
++ kullanilan malzemelerin devamı eklenecek
+## Nasıl Başlanır
 
-.. code-block:: console
+Projeyi yerel bilgisayarınıza klonlayın ve aşağıdaki adımları takip ederek projeyi başlatın.
 
-   (.venv) $ pip install lumache
-
-Creating recipes
-----------------
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+```bash
+git clone https://github.com/[kullanıcı-adı]/[proje-adı].git
+cd [SimurgFlY]
+make init
+make build
+make run
